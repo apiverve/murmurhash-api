@@ -1,0 +1,88 @@
+openapi: 3.0.4
+info:
+  title: MurmurHash
+  description: MurmurHash generates fast, non-cryptographic hashes using the MurmurHash3 algorithm. Ideal for hash tables, data partitioning, bloom filters, and checksums where cryptographic security isn't needed.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/murmurhash:
+    post:
+      summary: Generate MurmurHash
+      description: MurmurHash generates fast, non-cryptographic hashes using the MurmurHash3 algorithm. Ideal for hash tables, data partitioning, bloom filters, and checksums where cryptographic security isn't needed.
+      operationId: murmurhash
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  hash: 1586663183
+                  hashHex: 5e928f0f
+                  variant: murmur3_32
+                  seed: 0
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                  description: The text to hash
+                  example: hello world
+                seed:
+                  type: number
+                  description: Seed value for the hash function
+                  default: '0'
+                  example: 0
+                variant:
+                  type: string
+                  description: 'Hash variant: 32 (32-bit) or 128 (128-bit)'
+                  default: '32'
+                  example: '32'
+              required:
+              - text
+              example:
+                text: hello world
+                seed: 0
+                variant: '32'
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
