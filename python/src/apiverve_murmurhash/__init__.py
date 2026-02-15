@@ -1,1 +1,3 @@
-from .apiClient import MurmurhashAPIClient
+from .apiClient import MurmurhashAPIClient, MurmurhashAPIClientError
+
+__all__ = ['MurmurhashAPIClient', 'MurmurhashAPIClientError']
