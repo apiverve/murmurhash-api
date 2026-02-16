@@ -44,7 +44,11 @@ from apiverve_murmurhash.apiClient import MurmurhashAPIClient
 # Initialize the client with your APIVerve API key
 api = MurmurhashAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "hello world", "seed": 0, "variant": "32" }
+query = {
+    "text": "hello world",
+    "seed": 0,
+    "variant": "32"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "text": "hello world", "seed": 0, "variant": "32" }
+query = {
+    "text": "hello world",
+    "seed": 0,
+    "variant": "32"
+}
 ```
 
 ###### Simple Request
@@ -123,7 +131,11 @@ from apiverve_murmurhash.apiClient import MurmurhashAPIClient, MurmurhashAPIClie
 
 api = MurmurhashAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "hello world", "seed": 0, "variant": "32" }
+query = {
+    "text": "hello world",
+    "seed": 0,
+    "variant": "32"
+}
 
 try:
     result = api.execute(query)
@@ -144,7 +156,11 @@ from apiverve_murmurhash.apiClient import MurmurhashAPIClient, MurmurhashAPIClie
 
 api = MurmurhashAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "hello world", "seed": 0, "variant": "32" }
+query = {
+    "text": "hello world",
+    "seed": 0,
+    "variant": "32"
+}
 
 try:
     result = api.execute(query)
@@ -178,7 +194,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_murmurhash.apiClient import MurmurhashAPIClient, MurmurhashAPIClientError
 
-query = { "text": "hello world", "seed": 0, "variant": "32" }
+query = {
+    "text": "hello world",
+    "seed": 0,
+    "variant": "32"
+}
 
 # Using context manager ensures proper cleanup
 with MurmurhashAPIClient("[YOUR_API_KEY]") as api:
@@ -204,7 +224,11 @@ from apiverve_murmurhash.apiClient import MurmurhashAPIClient
 # Enable debug mode
 api = MurmurhashAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "text": "hello world", "seed": 0, "variant": "32" }
+query = {
+    "text": "hello world",
+    "seed": 0,
+    "variant": "32"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -219,8 +243,13 @@ from apiverve_murmurhash.apiClient import MurmurhashAPIClient
 
 api = MurmurhashAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "text": "hello world",
+    "seed": 0,
+    "variant": "32"
+}
+
 try:
-    query = { "text": "hello world", "seed": 0, "variant": "32" }
     result = api.execute(query)
     print(result)
 finally:
