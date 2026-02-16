@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/murmurhash",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "MurmurHash generates fast, non-cryptographic hashes using the MurmurHash3 algorithm. Ideal for hash tables, data partitioning, bloom filters, and checksums where cryptographic security isn't needed.",
   "main": "index.js",
   "types": "index.d.ts",
