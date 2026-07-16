@@ -20,7 +20,7 @@ namespace APIVerve.API.MurmurHash
         /// Seed value for the hash function
         /// </summary>
         [JsonProperty("seed")]
-        public string Seed { get; set; }
+        public int? Seed { get; set; }
 
         /// <summary>
         /// Hash variant: 32 (32-bit) or 128 (128-bit)
