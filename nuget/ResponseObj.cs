@@ -25,12 +25,15 @@ namespace APIVerve.API.MurmurHash
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("hash")]
-        public long Hash { get; set; }
+        public long? Hash { get; set; }
 
         [JsonProperty("hashHex")]
         public string HashHex { get; set; }
@@ -39,6 +42,18 @@ namespace APIVerve.API.MurmurHash
         public string Variant { get; set; }
 
         [JsonProperty("seed")]
-        public long Seed { get; set; }
+        public long? Seed { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
