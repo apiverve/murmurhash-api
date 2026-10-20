@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/murmurhash:
     post:
-      summary: Generate MurmurHash
+      summary: MurmurHash
       description: Generate a MurmurHash3 hash
       operationId: murmurhash
       parameters: []
