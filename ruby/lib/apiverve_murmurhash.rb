@@ -4,6 +4,6 @@ require_relative "apiverve_murmurhash/client"
 
 module APIVerve
   module Murmurhash
-    VERSION = "1.2.2"
+    VERSION = "1.2.3"
   end
 end
