@@ -35,7 +35,7 @@ class Client
      */
     private const VALIDATION_RULES = [
         'text' => ['type' => 'string', 'required' => true],
-        'seed' => ['type' => 'integer', 'required' => false, 'min' => 0],
+        'seed' => ['type' => 'integer', 'required' => false, 'min' => 0, 'max' => 4294967295],
         'variant' => ['type' => 'string', 'required' => false]
     ];
 
