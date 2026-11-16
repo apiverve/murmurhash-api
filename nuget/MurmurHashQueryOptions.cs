@@ -17,7 +17,7 @@ namespace APIVerve.API.MurmurHash
         public string Text { get; set; }
 
         /// <summary>
-        /// Seed value for the hash function
+        /// Seed value for the hash function, an unsigned 32-bit integer (0 to 4294967295)
         /// </summary>
         [JsonProperty("seed")]
         public int? Seed { get; set; }

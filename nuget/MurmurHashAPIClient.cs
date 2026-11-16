@@ -68,7 +68,7 @@ namespace APIVerve.API.MurmurHash
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
             { "text", new ValidationRule { Type = "string", Required = true } },
-            { "seed", new ValidationRule { Type = "integer", Required = false, Min = 0 } },
+            { "seed", new ValidationRule { Type = "integer", Required = false, Min = 0, Max = 4294967295 } },
             { "variant", new ValidationRule { Type = "string", Required = false } }
         };
 
