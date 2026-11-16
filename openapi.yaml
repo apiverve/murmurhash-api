@@ -66,7 +66,9 @@ paths:
                   description: The text to hash
                 seed:
                   type: integer
-                  description: Seed value for the hash function
+                  description: >-
+                    Seed value for the hash function, an unsigned 32-bit integer
+                    (0 to 4294967295)
                 variant:
                   type: string
                   description: 'Hash variant: 32 (32-bit) or 128 (128-bit)'
