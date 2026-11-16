@@ -30,7 +30,7 @@ class murmurhashWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/murmurhash';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"text":{"type":"string","required":true},"seed":{"type":"integer","required":false,"min":0,"default":0},"variant":{"type":"string","required":false,"default":"32"}};
+        this.validationRules = {"text":{"type":"string","required":true},"seed":{"type":"integer","required":false,"min":0,"max":4294967295,"default":0},"variant":{"type":"string","required":false,"default":"32"}};
     }
 
     /**
