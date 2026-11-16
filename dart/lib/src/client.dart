@@ -50,7 +50,7 @@ final _formatPatterns = {
 ///
 /// Parameters:
 /// * [text] (required) - The text to hash
-/// * [seed] - Seed value for the hash function [min: 0]
+/// * [seed] - Seed value for the hash function, an unsigned 32-bit integer (0 to 4294967295) [min: 0, max: 4294967295]
 /// * [variant] - Hash variant: 32 (32-bit) or 128 (128-bit)
 class MurmurhashClient {
   final String apiKey;
@@ -60,7 +60,7 @@ class MurmurhashClient {
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'text': ValidationRule(type: 'string', required: true),
-    'seed': ValidationRule(type: 'integer', required: false, min: 0),
+    'seed': ValidationRule(type: 'integer', required: false, min: 0, max: 4294967295),
     'variant': ValidationRule(type: 'string', required: false),
   };
 

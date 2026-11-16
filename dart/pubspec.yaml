@@ -1,6 +1,6 @@
 name: apiverve_murmurhash
 description: "MurmurHash generates fast, non-cryptographic hashes using the MurmurHash3 algorithm. Ideal for hash tables, data partitioning, bloom filters, and checksums where cryptographic security isn't needed."
-version: 1.2.5
+version: 1.2.6
 homepage: https://apiverve.com/marketplace/murmurhash?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/murmurhash-api/tree/main/dart
 
